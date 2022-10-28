@@ -1,0 +1,11 @@
+<div class="logo {{ bemMix }}">
+	<img class="logo__image" src="img/logo/logo.svg" alt="Логотип {{ projectName}}." width="55" height="55">
+
+	{% if isHeading %}
+		<h1 class="logo__title">{{ projectName }}</h1>
+	{% else %}
+		<b class="logo__title">{{ projectName }}</b>
+	{% endif %}
+
+	<p class="logo__description">{{ slogan }}</p>
+</div>

@@ -1,0 +1,11 @@
+<header class="page-header">
+	<div class="container page-header__inner">
+		{% include 'logo.twig' with { bemMix: 'page-header__logo', isHeading: true } %}
+
+		{% include 'contacts.twig' with { bemMix: 'page-header__contacts'} %}
+
+		<a class="page-header__btn btn btn--transparent" href="{{ callBack.url }}">
+			{{ callBack.title }}
+		</a>
+	</div>
+</header>

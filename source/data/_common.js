@@ -1,3 +1,3 @@
 export default {
-  projectName: 'Smart Device'
+  projectName: 'Smart Device',
 };

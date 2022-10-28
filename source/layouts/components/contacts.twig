@@ -1,0 +1,9 @@
+<ul class="contacts {{ bemMix }}">
+	{% for contact in contacts %}
+		<li class="contacts__item">
+			<a class="contacts__link contacts__link--{{ contact.id }}" href="{{ contact.id }}:{{ contact.value }}">
+				{{ contact.title ?? contact.value }}
+			</a>
+		</li>
+	{% endfor %}
+</ul>

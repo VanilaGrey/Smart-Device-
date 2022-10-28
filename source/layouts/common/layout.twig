@@ -8,7 +8,15 @@
 	</head>
 
 	<body>
+		{% if contacts %}
+			{% include '../components/page-header.twig' %}
+		{% endif %}
+
 		{% block main %}{% endblock %}
+
+		{% if contacts %}
+			{% include '../components/page-footer.twig' %}
+		{% endif %}
 
 		{% include 'scripts.twig' %}
 	</body>
