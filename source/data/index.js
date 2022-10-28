@@ -1,11 +1,11 @@
 export default {
   contacts: [
     {
-      id: 'mailto:',
+      id: 'mailto',
       value: 'info@sd.ru'
     },
     {
-      id: 'tel:',
+      id: 'tel',
       value: '+74950005252',
       title: '+7 (495) 000 52 52'
     }
