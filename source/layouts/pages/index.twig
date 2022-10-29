@@ -1,5 +1,7 @@
 {% extends '../common/layout.twig' %}
 
 {% block main %}
-	<main></main>
+	<main>
+		{% include '../components/main-header.twig' with promo %}
+	</main>
 {% endblock %}

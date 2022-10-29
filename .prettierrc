@@ -1,6 +1,6 @@
 {
+  "bracketSpacing": false,
   "singleQuote": true,
-  "trailingComma": "none",
   "overrides": [
     {
       "files": "*.html",

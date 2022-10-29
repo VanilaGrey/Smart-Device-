@@ -1,0 +1,25 @@
+.main-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header h2 {
+  position: absolute;
+  margin: auto;
+  padding: 150px;
+  font-weight: 700;
+  font-size: 80px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.main-header p {
+  margin: 0;
+}
+
+.main-header__image {
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+  margin-top: -130px;
+}

@@ -1,5 +1,36 @@
 .page-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
   padding: 30px 0;
-  color: $color-default-white;
-  background-image: $gradient-black-pearl-to-transparent;
+  color: $color-alice-blue;
+  background-image: linear-gradient(to top, transparent, $color-black-pearl 10px);
+}
+
+.page-header__inner {
+  display: flex;
+}
+
+.page-header__button {
+  display: inline-flex;
+  padding: 10px 15px;
+  margin: 10px auto;
+
+  color: $color-alice-blue;
+  border: 1px solid $color-alice-blue;
+  border-radius: 3px;
+  cursor: pointer;
+
+  transition: opacity $trans-default;
+
+  // &:disabled {
+  //   opacity: 0.5;
+
+  //   pointer-events: none;
+  // }
+
+  // @include hover-focus {
+  //   opacity: 0.8;
+  // }
 }

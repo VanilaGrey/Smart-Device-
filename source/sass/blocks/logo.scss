@@ -1,0 +1,25 @@
+.logo {
+  display: flex;
+}
+
+.logo__image {
+  margin-right: 15px;
+}
+
+.logo__title {
+  margin: 4px 0 0;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 29px;
+}
+
+.logo__description {
+  position: absolute;
+  top: 65px;
+  margin: 0 0 0 70px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: $fz-secondary;
+  color: $color-white-70;
+}

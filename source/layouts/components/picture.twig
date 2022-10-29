@@ -1,0 +1,18 @@
+<picture>
+	{% with image %}
+		{% if webp %}
+			<source
+				type="image/webp"
+				srcset="{{ webp }} 1x{{ webp2x ? ', ' ~ webp2x ~ ' 2x' }}"
+			/>
+		{% endif %}
+
+		<img
+			{{ className ? 'class="' ~ className ~ '"' }}
+			src="{{ default }}"
+			{{ default2x ? 'srcset="' ~ default2x ~ ' 2x"' }}
+			alt="{{ alt }}"
+			{{ alt ?: 'aria-hidden="true"' }}
+		/>
+	{% endwith %}
+</picture>
