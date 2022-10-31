@@ -1,7 +1,19 @@
 {% extends '../common/layout.twig' %}
 
 {% block main %}
-	<main>
-		{% include '../components/main-header.twig' with promo %}
-	</main>
+	{% include '../components/main-header.twig' with promo|merge({ bemMix: 'page-main__header' }) %}
+
+	<section class="page-main__section container">
+		<h2 class="visually-hidden">{{ advantagesHeading }}</h2>
+
+		<ul class="page-main__grid grid">
+			{% for advantage in advantages %}
+				<li>
+					{% include '../components/content-card.twig' with { bemMix: 'grid__card', content: advantage } %}
+				</li>
+			{% endfor %}
+		</ul>
+	</section>
+
+	{% include '../components/about-section.twig' with aboutCompany %}
 {% endblock %}

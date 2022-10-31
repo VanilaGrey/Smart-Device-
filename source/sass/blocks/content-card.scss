@@ -1,0 +1,61 @@
+.content-card {
+  position: relative;
+  padding: 40px 45px 46px;
+  border: 1px solid $color-whisper-light;
+  transition: color $trans-default, background-color $trans-default, border-color $trans-default;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    width: 5px;
+    background-color: $color-deep-sky-blue;
+  }
+
+  img {
+    transition: filter $trans-default;
+  }
+
+  h3 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+    color: $color-deep-sky-blue;
+    transition: color $trans-default;
+
+    &:nth-child(n + 1) {
+      margin-top: 20px;
+    }
+  }
+
+  p {
+    margin: 0;
+    line-height: 22px;
+    font-family: $ff-pt-mono;
+
+    &:nth-child(n + 1) {
+      margin-top: 12px;
+    }
+
+    &:last-child {
+      min-height: 110px;
+    }
+  }
+
+  &:hover {
+    color: $color-alice-blue-light;
+    background-color: $color-deep-sky-blue;
+    border-color: $color-deep-sky-blue;
+
+    img {
+      filter: grayscale(1) contrast(10);
+    }
+
+    h3 {
+      color: $color-alice-blue-light;
+    }
+  }
+}

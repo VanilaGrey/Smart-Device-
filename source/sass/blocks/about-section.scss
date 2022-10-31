@@ -1,0 +1,40 @@
+.about-section {
+  display: flex;
+}
+
+.about-section__image {
+  flex-shrink: 0;
+  margin-right: 100px;
+}
+
+.about-section__text {
+  h2 {
+    margin: 0 0 13px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  p {
+    margin: 0;
+    line-height: 22px;
+    font-family: $ff-pt-mono;
+
+    + p {
+      margin-top: 20px;
+    }
+  }
+
+  &--closed {
+    p:nth-of-type(n + 3) {
+      display: none;
+    }
+  }
+}
+
+.about-section__btn {
+  min-width: 180px;
+  min-height: 45px;
+  margin-top: 40px;
+  color: $color-deep-sky-blue;
+}

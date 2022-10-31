@@ -1,0 +1,11 @@
+<section class="about-section container {{ bemMix }} data-about-section">
+	{% if image %}
+		<div class="about-section__image">
+			{% include 'picture.twig' with { image } %}
+		</div>
+	{% endif %}
+
+	<div class="about-section__text">
+		{{ content }}
+	</div>
+</section>

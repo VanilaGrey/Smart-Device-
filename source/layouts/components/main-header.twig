@@ -1,5 +1,9 @@
-<section class="main-header">
-	{{ content }}
-
+<header class="main-header {{ bemMix }}">
 	{% include 'picture.twig' with { className: 'main-header__image', image } %}
-</section>
+
+	<div class="main-header__container container">
+		{{ content }}
+
+		<a class="main-header__btn" href="{{ link.url }}">{{ link.title }}</a>
+	</div>
+</header>

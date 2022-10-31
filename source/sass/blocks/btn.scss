@@ -1,23 +1,8 @@
 .btn {
-  font-size: $fz-secondary;
-  line-height: 16.41px;
-  box-sizing: border-box;
-  padding: 9px 16px 5px;
-  border: solid 1px $color-alice-blue;
-  color: $color-alice-blue;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: opacity $trans-default;
-  margin: 5px 0 10px 32px;
-  text-transform: uppercase;
-  letter-spacing: 0.9px;
+  @include btn;
 
-  &:disabled {
-    opacity: 0.5;
-    pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
-  }
+  padding: 11px 15px;
+  font-size: 14px;
+  line-height: 16px;
+  border: 1px solid;
 }

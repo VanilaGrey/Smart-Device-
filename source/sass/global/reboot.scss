@@ -1,19 +1,27 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+* {
+  &,
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+
+  @include focus {
+    outline: 2px solid;
+    outline-offset: 2px;
+  }
 }
 
 html {
   min-width: 320px;
   font-size: $fz_default;
-  line-height: 1.34375;
+  line-height: 1.25;
   font-family: $ff-roboto-condensed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility; // оптимизация выравнивания шрифта относительно центра строки
   // если по прежнему есть проблемы с выравниванием
   // https://transfonter.org/ - включите настройку https://prnt.sc/12rnt6g и переконвертируйте шрифт
+  color: $color-black-pearl-dark;
 }
 
 body {

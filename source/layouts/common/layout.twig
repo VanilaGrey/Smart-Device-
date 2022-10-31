@@ -4,20 +4,27 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>{{ projectName }}</title>
-		<link rel="stylesheet" href="css/style.min.css">
+		<link rel="stylesheet" href="css/style.min.css{{ version }}">
+		<link href="fonts/roboto-condensed-700.woff2" rel="preload" as="font" crossorigin="anonymous">
+		<link href="fonts/roboto-condensed-400.woff2" rel="preload" as="font" crossorigin="anonymous">
+		<link href="fonts/pt-mono.woff2" rel="preload" as="font" crossorigin="anonymous">
 	</head>
 
 	<body>
-		{% if contacts %}
-			{% include '../components/page-header.twig' %}
-		{% endif %}
+		<div class="page">
+			{% block header %}
+				{% include '../components/page-header.twig' with { bemMix: 'page__header' } %}
+			{% endblock %}
 
-		{% block main %}{% endblock %}
+			<main class="page__main page-main">
+				{% block main %}{% endblock %}
+			</main>
 
-		{% if contacts %}
-			{% include '../components/page-footer.twig' %}
-		{% endif %}
+			{% block footer %}
+				{% include '../components/page-footer.twig' with { bemMix: 'page__footer' } %}
+			{% endblock %}
 
-		{% include 'scripts.twig' %}
+			{% include 'scripts.twig' %}
+		</div>
 	</body>
 </html>
