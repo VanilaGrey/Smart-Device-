@@ -11,7 +11,7 @@ export default {
     },
     link: {
       title: 'Получить бесплатную консультацию',
-      url: '#!',
+      url: '#feedback',
     },
   },
   advantages: [
@@ -52,4 +52,109 @@ export default {
       webp2x: 'img/year@2x.webp',
     },
   },
+  services: {
+    heading: 'Smart Device предлагает следующие товары и услуги',
+    list: [
+      {
+        image: {
+          default: 'img/services-photo-1.jpg',
+          default2x: 'img/services-photo-1@2x.jpg',
+          webp: 'img/services-photo-1.webp',
+          webp2x: 'img/services-photo-1@2x.webp',
+        },
+        link: {
+          title: 'Производство печатных плат',
+          url: '#!',
+        },
+      },
+      {
+        image: {
+          default: 'img/services-photo-2.jpg',
+          default2x: 'img/services-photo-2@2x.jpg',
+          webp: 'img/services-photo-2.webp',
+          webp2x: 'img/services-photo-2@2x.webp',
+        },
+        link: {
+          title: 'Монтаж печатных плат',
+          url: '#!',
+        },
+      },
+      {
+        image: {
+          default: 'img/services-photo-3.jpg',
+          default2x: 'img/services-photo-3@2x.jpg',
+          webp: 'img/services-photo-3.webp',
+          webp2x: 'img/services-photo-3@2x.webp',
+        },
+        link: {
+          title: 'Комплектующие для&nbsp;светотехники',
+          url: '#!',
+        },
+      },
+    ],
+  },
+  feedback: {
+    content: `<h2>Остались вопросы? Задайте их нам!</h2>
+      <p>Мы проконсультируем Вас бесплатно</p>
+      <form action="https://echo.htmlacademy.ru">
+        <input
+          id="feedback-name"
+          name="name"
+          type="text"
+          placeholder="Имя"
+          required
+        />
+        <label class="visually-hidden" for="feedback-name">Имя</label>
+        <input
+          id="feedback-phone"
+          name="phone"
+          type="tel"
+          placeholder="Телефон"
+          required
+        />
+        <label class="visually-hidden" for="feedback-phone">Телефон</label>
+        <textarea
+          name="message"
+          id="feedback-message"
+          placeholder="Ваш вопрос"
+        ></textarea>
+        <label class="visually-hidden" for="feedback-message">
+          Ваш вопрос
+        </label>
+        <button type="submit">Задать вопрос</button>
+        <label>
+          <input
+            name="agree"
+            type="checkbox"
+            checked
+            required
+          />
+          Я согласен на обработку персональных данных
+        </label>
+      </form>`,
+    id: 'feedback',
+    image: {
+      default: 'img/airplane.png',
+      default2x: 'img/airplane@2x.png',
+      webp: 'img/airplane.webp',
+      webp2x: 'img/airplane@2x.webp',
+    },
+  },
+  socials: [
+    {
+      id: 'ok',
+      title: 'Мы в Одноклассниках.',
+      url: '#!',
+    },
+    {
+      id: 'vk',
+      title: 'Мы в Контакте.',
+      url: '#!',
+    },
+    {
+      id: 'pinterest',
+      title: 'Мы в Pinterest',
+      url: '#!',
+    },
+  ],
 };

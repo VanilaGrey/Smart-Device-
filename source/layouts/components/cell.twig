@@ -1,0 +1,11 @@
+<div class="cell {{ bemMix }}" data-cell>
+	<h2 class="cell__heading">{{ heading }}</h2>
+
+	<ul class="cell__list">
+		{% for item in list %}
+			<li class="cell__item">
+				<a class="cell__link" href="{{ item.url }}">{{ item.title }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+</div>

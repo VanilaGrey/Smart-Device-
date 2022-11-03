@@ -4,6 +4,8 @@
 	<div class="main-header__container container">
 		{{ content }}
 
+	{% if link %}
 		<a class="main-header__btn" href="{{ link.url }}">{{ link.title }}</a>
+	{% endif %}
 	</div>
 </header>

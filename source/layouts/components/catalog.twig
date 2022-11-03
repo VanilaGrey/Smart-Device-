@@ -1,0 +1,17 @@
+<section class="catalog">
+	<h2 class="catalog__heading container">{{ heading }}</h2>
+
+	<ul class="catalog__list container">
+		{% for item in list %}
+			{% with item %}
+				<li>
+					<a class="catalog__link" href="{{ link.url }}">
+						{% include 'picture.twig' with { className: 'catalog__image', image } %}
+
+						{{ link.title }}
+					</a>
+				</li>
+			{% endwith %}
+		{% endfor %}
+	</ul>
+</section>

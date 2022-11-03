@@ -1,0 +1,13 @@
+<section class="feedback-section">
+	<div class="feedback-section__inner container {{ bemMix }}">
+		{% if image %}
+			<div class="feedback-section__image">
+				{% include 'picture.twig' with { image } %}
+			</div>
+		{% endif %}
+
+		<div class="feedback-section__text">
+			{{ content }}
+		</div>
+	</div>
+</section>

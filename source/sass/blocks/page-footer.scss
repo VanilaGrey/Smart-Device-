@@ -1,0 +1,41 @@
+.page-footer {
+  padding: 50px 0 20px;
+  color: $color-default-white;
+  background-color: $color-black-pearl;
+}
+
+.page-footer__inner {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  grid-template-columns: 335fr 460fr 345fr;
+  grid-template-areas: "logo sitemap contacts" "socials sitemap contacts";
+  gap: 40px;
+  align-items: start;
+}
+
+.page-footer__logo {
+  grid-area: logo;
+}
+
+.page-footer__socials {
+  grid-area: socials;
+  justify-self: start;
+  margin: 0 0 0 11px;
+}
+
+.page-footer__cell {
+  grid-area: contacts;
+
+  &--sitemap {
+    grid-area: sitemap;
+
+    ul {
+      column-count: 2; // Pixelperfect
+      column-gap: 40px;
+    }
+
+    li:last-child {
+      margin-bottom: 60px; // Pixelperfect
+    }
+  }
+}

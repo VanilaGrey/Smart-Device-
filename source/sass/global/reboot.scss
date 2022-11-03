@@ -15,6 +15,7 @@ html {
   min-width: 320px;
   font-size: $fz_default;
   line-height: 1.25;
+  scroll-behavior: smooth;
   font-family: $ff-roboto-condensed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

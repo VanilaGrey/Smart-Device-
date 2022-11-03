@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   min-height: 880px;
-  padding: 120px 0;
+  padding: 144px 0 120px;
   overflow: hidden;
   color: $color-alice-blue-light;
   background-color: $color-black-pearl;
@@ -21,7 +21,7 @@
 
 .main-header__container {
   margin: auto;
-  padding: 24px 40px 0 175px;
+  padding: 0 40px 0 175px;
   z-index: 2;
 
   h2 {
