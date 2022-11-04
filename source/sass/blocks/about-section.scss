@@ -1,19 +1,35 @@
 .about-section {
   display: flex;
   margin-bottom: 100px;
+
+  @include vp-1023 {
+    margin-bottom: 80px;
+  }
 }
 
 .about-section__image {
   flex-shrink: 0;
   margin-right: 100px;
+
+  @include vp-1023 {
+    margin-right: 25px;
+  }
 }
 
 .about-section__text {
+  @include vp-1023 {
+    margin-top: -4px; //pixelperfect
+  }
+
   h2 {
     margin: 0 0 13px;
     font-weight: 400;
     font-size: 36px;
     line-height: 50px;
+
+    @include vp-1023 {
+      margin-bottom: 11px; //pixelperfect
+    }
   }
 
   p {
@@ -38,4 +54,8 @@
   min-height: 45px;
   margin-top: 40px;
   color: $color-deep-sky-blue;
+
+  @include vp-1023 {
+    margin-top: 16px;
+  }
 }

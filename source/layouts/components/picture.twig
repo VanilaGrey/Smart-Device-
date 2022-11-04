@@ -3,16 +3,48 @@
 		{% if webp %}
 			<source
 				type="image/webp"
+				{{ webpTablet ? 'media="(min-width: 1024px)"' }}
 				srcset="{{ webp }} 1x{{ webp2x ? ', ' ~ webp2x ~ ' 2x' }}"
 			/>
+			{% if webpTablet %}
+				<source
+					type="image/webp"
+					media="(min-width: 768px)"
+					srcset="{{ webpTablet }} 1x{{ webpTablet2x ? ', ' ~ webpTablet2x ~ ' 2x' }}"
+				/>
+			{% endif %}
+			{% if webpMobile %}
+				<source
+					type="image/webp"
+					srcset="{{ webpMobile }} 1x{{ webpMobile2x ? ', ' ~ webpMobile2x ~ ' 2x' }}"
+				/>
+			{% endif %}
 		{% endif %}
 
-		<img
-			{{ className ? 'class="' ~ className ~ '"' }}
-			src="{{ default }}"
-			{{ default2x ? 'srcset="' ~ default2x ~ ' 2x"' }}
-			alt="{{ alt }}"
-			{{ alt ?: 'aria-hidden="true"' }}
-		/>
+	{% if defaultTablet and defaultMobile %}
+			<source
+				media="(min-width: 1024px)"
+				srcset="{{ default }} 1x{{ default2x ? ', ' ~ default2x ~ ' 2x' }}"
+			/>
+			<source
+				media="(min-width: 768px)"
+				srcset="{{ defaultTablet }} 1x{{ defaultTablet2x ? ', ' ~ defaultTablet2x ~ ' 2x' }}"
+			/>
+			<img
+				{{ className ? 'class="' ~ className ~ '"' }}
+				src="{{ defaultMobile }}"
+				{{ defaultMobile2x ? 'srcset="' ~ defaultMobile2x ~ ' 2x"' }}
+				alt="{{ alt }}"
+				{{ alt ?: 'aria-hidden="true"' }}
+			/>
+		{% else %}
+			<img
+				{{ className ? 'class="' ~ className ~ '"' }}
+				src="{{ default }}"
+				{{ default2x ? 'srcset="' ~ default2x ~ ' 2x"' }}
+				alt="{{ alt }}"
+				{{ alt ?: 'aria-hidden="true"' }}
+			/>
+		{% endif %}
 	{% endwith %}
 </picture>

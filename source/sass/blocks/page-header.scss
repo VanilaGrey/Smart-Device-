@@ -2,6 +2,10 @@
   padding: 30px 0 41px;
   color: $color-alice-blue-light;
   background-image: $gradient-black-pearl-to-transparent;
+
+  @include vp-1023 {
+    padding: 20px 0 33px;
+  }
 }
 
 .page-header__inner {
@@ -9,13 +13,26 @@
   grid-template-columns: minmax(210px, 28fr) 50fr 29fr;
   gap: 75px;
   align-items: center;
+
+  @include vp-1023 {
+    grid-template-columns: 210px 1fr;
+  }
 }
 
 .page-header__contacts {
   margin: 0;
+
+  @include vp-1023 {
+    justify-content: end;
+    transform: translate(-9px, -5px); // Pixelperfect
+  }
 }
 
 .page-header__btn {
   width: 160px;
   margin-left: 70px;
+
+  @include vp-1023 {
+    @include visually-hidden;
+  }
 }

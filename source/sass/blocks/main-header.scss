@@ -6,6 +6,11 @@
   overflow: hidden;
   color: $color-alice-blue-light;
   background-color: $color-black-pearl;
+
+  @include vp-1023 {
+    min-height: 640px;
+    padding-top: 95px;
+  }
 }
 
 .main-header__image {
@@ -17,12 +22,21 @@
   max-width: none;
   margin: 0 auto;
   object-fit: cover;
+
+  @include vp-1023 {
+    left: -124px; // Pixelperfect
+    width: 1396px; // Pixelperfect
+  }
 }
 
 .main-header__container {
   margin: auto;
   padding: 0 40px 0 175px;
   z-index: 2;
+
+  @include vp-1023 {
+    padding: 0 50px;
+  }
 
   h2 {
     margin: 0 0 32px;
@@ -31,6 +45,12 @@
     font-size: 80px;
     line-height: 94px;
     text-transform: uppercase;
+
+    @include vp-1023 {
+      margin-bottom: 0;
+      font-size: 64px;
+      line-height: 75px;
+    }
   }
 
   p {
@@ -45,9 +65,13 @@
   @include btn;
 
   display: table;
-  margin-top: 48px;
+  margin-top: 47px;
   padding: 17px 27px;
   font-size: 18px;
   line-height: 21px;
   background-color: $color-deep-sky-blue;
+
+  @include vp-1023 {
+    margin: 56px 0 0 44px;
+  }
 }

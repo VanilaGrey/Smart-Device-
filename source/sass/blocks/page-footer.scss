@@ -2,6 +2,10 @@
   padding: 50px 0 20px;
   color: $color-default-white;
   background-color: $color-black-pearl;
+
+  @include vp-1023 {
+    padding-bottom: 60px;
+  }
 }
 
 .page-footer__inner {
@@ -11,6 +15,12 @@
   grid-template-areas: "logo sitemap contacts" "socials sitemap contacts";
   gap: 40px;
   align-items: start;
+
+  @include vp-1023 {
+    grid-template-columns: 215px 1fr;
+    grid-template-areas: "logo socials" "sitemap contacts";
+    column-gap: 134px;
+  }
 }
 
 .page-footer__logo {
@@ -21,10 +31,20 @@
   grid-area: socials;
   justify-self: start;
   margin: 0 0 0 11px;
+
+  @include vp-1023 {
+    justify-self: end;
+    align-self: center;
+    margin: 0 -5px 0 11px; //pixelperfect
+  }
 }
 
 .page-footer__cell {
   grid-area: contacts;
+
+  @include vp-1023 {
+    margin: 0;
+  }
 
   &--sitemap {
     grid-area: sitemap;
@@ -32,10 +52,18 @@
     ul {
       column-count: 2; // Pixelperfect
       column-gap: 40px;
+
+      @include vp-1023 {
+        column-count: 1;
+      }
     }
 
     li:last-child {
       margin-bottom: 60px; // Pixelperfect
+
+      @include vp-1023 {
+        margin-bottom: 0;
+      }
     }
   }
 }

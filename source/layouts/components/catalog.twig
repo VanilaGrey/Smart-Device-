@@ -8,7 +8,7 @@
 					<a class="catalog__link" href="{{ link.url }}">
 						{% include 'picture.twig' with { className: 'catalog__image', image } %}
 
-						{{ link.title }}
+						<p class="catalog__text">{{ link.title }}</p>
 					</a>
 				</li>
 			{% endwith %}

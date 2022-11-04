@@ -1,5 +1,9 @@
 .cell {
-  padding: 5px 0;
+  padding: 6px 0;
+
+  @include vp-1023 {
+    padding: 0;
+  }
 }
 
 .cell__heading {

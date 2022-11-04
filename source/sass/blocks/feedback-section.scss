@@ -5,6 +5,10 @@
   background-color: $color-deep-sky-blue;
   background-image: linear-gradient();
 
+  @include vp-1023 {
+    padding: 45px 0 118px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -14,6 +18,10 @@
     clip-path: polygon(0 0, 100% 0, 0 100%);
     width: calc(50% + 12px);
     background-color: rgba($color-black-pearl, 0.5);
+
+    @include vp-1023 {
+      display: none;
+    }
   }
 }
 
@@ -26,6 +34,10 @@
   max-width: 42%;
   margin: 81px 102px 0 0;
   z-index: 1;
+
+  @include vp-1023 {
+    display: none;
+  }
 }
 
 .feedback-section__text form {
@@ -33,6 +45,10 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 20px 30px;
   margin: 36px 10px 0 5px;
+
+  @include vp-1023 {
+    margin: 26px 0 0;
+  }
 
   input:not([type="checkbox"]),
   textarea {
@@ -51,6 +67,11 @@
     padding-bottom: 24px;
     min-height: 155px;
     margin-bottom: 14px;
+
+    @include vp-1023 {
+      padding-top: 31px;
+      margin-bottom: 15px;
+    }
   }
 
   button {
@@ -61,6 +82,10 @@
     padding: 15px 20px 12px;
     background-color: $color-black-pearl;
     border: none;
+
+    @include vp-1023 {
+      margin-right: 55px;
+    }
   }
 
   [type="checkbox"] {
@@ -96,14 +121,34 @@
     color: rgba($color-default-white, 0.8);
     cursor: pointer;
 
+    @include vp-1023 {
+      padding: 10px 0;
+    }
+
     [type="checkbox"] {
       margin: -1px 10px 0 0;
+
+      @include vp-1023 {
+        margin: 0 10px 0 0;
+      }
     }
   }
 }
 
 .feedback-section__text {
   margin-left: 13px;
+
+  @include vp-1023 {
+    margin-left: 0;
+
+    h2 {
+      margin-bottom: 8px;
+    }
+
+    > p {
+      margin-left: 0;
+    }
+  }
 
   h2 {
     margin: 0 0 13px;
