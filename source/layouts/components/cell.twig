@@ -1,7 +1,17 @@
-<div class="cell {{ bemMix }}" data-cell>
+<div class="cell {{ bemMix }}">
 	<h2 class="cell__heading">{{ heading }}</h2>
 
-	<ul class="cell__list">
+<button
+		class="cell__toggler"
+		type="button"
+		aria-controls="cell-{{ id }}"
+		aria-expanded="{{ expanded ? 'true' : false }}"
+		data-nojs
+	>
+		<span class="visually-hidden">{{ spoilerTogglerText }}</span>
+	</button>
+
+	<ul class="cell__list" id="cell-{{ id }}">
 		{% for item in list %}
 			<li class="cell__item">
 				<a class="cell__link" href="{{ item.url }}">{{ item.title }}</a>

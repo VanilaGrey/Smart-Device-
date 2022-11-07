@@ -96,8 +96,8 @@ module.exports = {
       'always',
       {
         except: ['first-nested'],
-        ignore: ['after-comment']
-      }
+        ignore: ['after-comment'],
+      },
     ],
 
     'media-feature-colon-space-after': 'always',
@@ -118,8 +118,8 @@ module.exports = {
       'always',
       {
         except: ['first-nested', 'blockless-after-blockless'],
-        ignore: ['after-comment']
-      }
+        ignore: ['after-comment'],
+      },
     ],
     'at-rule-name-case': 'lower',
     'at-rule-name-space-after': 'always',
@@ -127,21 +127,20 @@ module.exports = {
       true,
       {
         ignoreAtRules: [
-          'mixin',
+          'content',
           'define-mixin',
           'include',
-          'content',
+          'mixin',
           'rules',
-          'each'
         ]
       }
     ],
     'at-rule-no-vendor-prefix': true,
     'at-rule-semicolon-newline-after': 'always',
 
-    indentation: [2, { ignore: ['inside-parens'] }],
+    indentation: [2, {ignore: ['inside-parens']}],
 
-    'max-nesting-depth': [4, { ignoreAtRules: ['media', 'include'] }],
+    'max-nesting-depth': [4, {ignoreAtRules: ['media', 'include']}],
 
     'max-empty-lines': 2,
     'no-eol-whitespace': true,
@@ -165,6 +164,6 @@ module.exports = {
 
     'color-no-invalid-hex': true,
     'color-no-hex': null,
-    'color-named': 'never'
-  }
+    'color-named': 'never',
+  },
 };

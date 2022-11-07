@@ -17,9 +17,7 @@
     height: 50px;
   }
 
-  @include hover {
-    opacity: 0.8;
-  }
+  @include default-interactive;
 
   &--ok {
     background-image: url("../img/sprite_auto.svg#ok");

@@ -2,7 +2,7 @@ export default {
   advantagesHeading: 'Преимущества.',
   promo: {
     content:
-      '<h2>Печатные платы</h2><p>производство и монтаж, поставка комплектующих,<br>блоков и модулей</p>',
+      '<h2>Печатные платы</h2><p>производство и монтаж, поставка комплектующих, блоков и модулей</p>',
     image: {
       default: 'img/background-promo.jpg',
       default2x: 'img/background-promo@2x.jpg',
@@ -10,6 +10,7 @@ export default {
       webp2x: 'img/background-promo@2x.webp',
     },
     link: {
+      mobileTitle: 'бесплатная консультация',
       title: 'Получить бесплатную консультацию',
       url: '#feedback',
     },
@@ -29,10 +30,13 @@ export default {
       </p>
       <p>
         Наши поставщики - мировые производители электронных компонентов: OSRAM,
-        CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service
-        Devices применяются на предприятиях Российских Железных Дорог (РЖД),
-        РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших
-        клиентов крупнейшие Производители светотехники России.
+        CREE, HOLGLITRONIC, REFOND.
+        <span class="mobile-hide"
+          >Печатные платы и комплектующие Service Devices применяются на
+          предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ,
+          АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
+          Производители светотехники России.</span
+        >
       </p>
       <p>
         Smart Device - это команда профессионалов. Через нас прошло более 1 000
@@ -116,6 +120,7 @@ export default {
         },
       },
     ],
+    mobileHeading: 'Товары и услуги Smart Device',
   },
   feedback: {
     content: `<h2>Остались вопросы? Задайте их нам!</h2>
@@ -125,7 +130,9 @@ export default {
           id="feedback-name"
           name="name"
           type="text"
+          value="Имя"
           placeholder="Имя"
+          pattern="^[A-Za-zА-Яа-яЁё\\- ]+$"
           required
         />
         <label class="visually-hidden" for="feedback-name">Имя</label>
@@ -133,15 +140,17 @@ export default {
           id="feedback-phone"
           name="phone"
           type="tel"
+          value="Телефон"
           placeholder="Телефон"
+          pattern="^\\+[\\d\\-() ]{10,17}$"
           required
         />
         <label class="visually-hidden" for="feedback-phone">Телефон</label>
         <textarea
-          name="message"
-          id="feedback-message"
+        id="feedback-message"
+        name="message"
           placeholder="Ваш вопрос"
-        ></textarea>
+          >Ваш вопрос</textarea>
         <label class="visually-hidden" for="feedback-message">
           Ваш вопрос
         </label>

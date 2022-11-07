@@ -10,7 +10,9 @@ const [mainPhone, ...additionalPhones] = [
 
 export default {
   addressLinks: {
+    expanded: true,
     heading: 'Наш офис',
+    id: 'contacts',
     list: [
       {
         title: 'г. Мытищи, Олимпийский проспект, д.10',
@@ -37,9 +39,12 @@ export default {
       value: mainPhone.shortPhone,
     },
   ],
+  description:
+  'Печатные платы: производство и монтаж, поставка комплектующих, блоков и модулей',
   projectName: 'Smart Device',
   sitemapLinks: {
     heading: 'Разделы сайта',
+    id: 'sitemap',
     list: [
       'О Компании',
       'Продукты',
@@ -54,5 +59,5 @@ export default {
     })),
   },
   slogan: 'умные технологии',
-  sloganFooter: 'умные технологии',
+  spoilerTogglerText: 'Список ссылок.',
 };

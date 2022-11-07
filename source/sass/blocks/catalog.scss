@@ -6,6 +6,10 @@
   @include vp-1023 {
     padding: 55px 0 75px;
   }
+
+  @include vp-767 {
+    padding: 46px 0 85px;
+  }
 }
 
 .catalog__heading {
@@ -17,6 +21,13 @@
 
   @include vp-1023 {
     margin-bottom: 40px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 30px;
+    padding-right: 40px; // Pixelperfect
+    font-size: 28px;
+    line-height: 39px;
   }
 }
 
@@ -40,12 +51,17 @@
   display: block;
   min-height: 650px;
   padding: 48px 120px 100px 40px;
-  font-size: 20px;
-  line-height: 1.5;
+
+  @include default-interactive;
 
   @include vp-1023 {
     min-height: 250px;
     padding: 37px 44px 100px;
+  }
+
+  @include vp-767 {
+    min-height: 250px;
+    padding: 26px 30px 70px;
   }
 
   &::before {
@@ -61,6 +77,11 @@
     background-position: center;
     background-size: 5px;
     border-top-left-radius: 3px;
+
+    @include vp-767 {
+      width: 40px;
+      height: 40px;
+    }
   }
 }
 
@@ -77,8 +98,15 @@
 .catalog__text {
   margin: 0;
   max-width: 190px; // Pixelperfect
+  font-size: 20px;
+  line-height: 30px;
 
   @include vp-1023 {
     max-width: 150px; // Pixelperfect
+  }
+
+  @include vp-767 {
+    max-width: 135px; // Pixelperfect
+    font-size: 18px;
   }
 }

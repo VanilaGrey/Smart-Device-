@@ -1,6 +1,8 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import initAccordeon from './modules/accordeon';
 import initAboutSection from './modules/about-section';
+import initForm from './modules/form';
 
 // ---------------------------------
 
@@ -19,6 +21,12 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     const aboutSection = document.querySelectorAll('[data-about-section]');
     aboutSection.forEach(initAboutSection);
+
+    const accordeonElements = document.querySelectorAll('[data-accordeon]');
+    accordeonElements.forEach(initAccordeon);
+
+    document.querySelectorAll('form').forEach(initForm);
+
     initModals();
   });
 });

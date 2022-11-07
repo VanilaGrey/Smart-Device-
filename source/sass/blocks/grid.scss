@@ -4,8 +4,20 @@
   gap: 30px;
   padding: 0;
   list-style: none;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+
+    li:nth-child(n + 3) .grid__card {
+      min-height: 325px; // Pixelperfect
+    }
+  }
 }
 
 .grid__card {
   min-height: 100%;
+
+  @include vp-767 {
+    min-height: 340px;
+  }
 }

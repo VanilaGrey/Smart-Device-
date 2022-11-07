@@ -6,6 +6,10 @@
   @include vp-1023 {
     padding-bottom: 60px;
   }
+
+  @include vp-767 {
+    padding: 35px 0;
+  }
 }
 
 .page-footer__inner {
@@ -21,10 +25,21 @@
     grid-template-areas: "logo socials" "sitemap contacts";
     column-gap: 134px;
   }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    grid-template-areas: "logo" "socials" "sitemap" "contacts";
+    gap: 0;
+  }
 }
 
 .page-footer__logo {
   grid-area: logo;
+
+  @include vp-767 {
+    justify-self: center;
+    margin-right: 17px; // Pixelperfect
+  }
 }
 
 .page-footer__socials {
@@ -37,6 +52,11 @@
     align-self: center;
     margin: 0 -5px 0 11px; //pixelperfect
   }
+
+  @include vp-767 {
+    justify-self: center;
+    margin: 15px 0 19px 3px;
+  }
 }
 
 .page-footer__cell {
@@ -44,6 +64,14 @@
 
   @include vp-1023 {
     margin: 0;
+  }
+
+  @include vp-767 {
+    margin: 0 -25px;
+
+    + .page-footer__cell {
+      margin-top: -1px;
+    }
   }
 
   &--sitemap {

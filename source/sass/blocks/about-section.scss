@@ -14,6 +14,10 @@
   @include vp-1023 {
     margin-right: 25px;
   }
+
+  @include vp-767 {
+    display: none;
+  }
 }
 
 .about-section__text {
@@ -30,6 +34,12 @@
     @include vp-1023 {
       margin-bottom: 11px; //pixelperfect
     }
+
+    @include vp-767 {
+      margin-bottom: 11px;
+      font-size: 28px;
+      line-height: 42px;
+    }
   }
 
   p {
@@ -40,11 +50,28 @@
     + p {
       margin-top: 20px;
     }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 19px;
+
+      + p {
+        margin-top: 18px;
+      }
+    }
   }
 
   &--closed {
     p:nth-of-type(n + 3) {
       display: none;
+    }
+  }
+
+  &:not(&--closed) {
+    .mobile-hide {
+      @include vp-767 {
+        display: initial;
+      }
     }
   }
 }
@@ -57,5 +84,11 @@
 
   @include vp-1023 {
     margin-top: 16px;
+  }
+
+  @include vp-767 {
+    min-width: 160px;
+    min-height: 0;
+    margin-top: 14px;
   }
 }

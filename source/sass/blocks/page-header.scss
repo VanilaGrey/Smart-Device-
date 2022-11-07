@@ -1,10 +1,14 @@
 .page-header {
-  padding: 30px 0 41px;
+  padding: 30px 0 40px;
   color: $color-alice-blue-light;
   background-image: $gradient-black-pearl-to-transparent;
 
   @include vp-1023 {
-    padding: 20px 0 33px;
+    padding: 20px 0 30px;
+  }
+
+  @include vp-767 {
+    padding: 15px 0 20px;
   }
 }
 
@@ -15,7 +19,8 @@
   align-items: center;
 
   @include vp-1023 {
-    grid-template-columns: 210px 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 }
 
@@ -25,6 +30,10 @@
   @include vp-1023 {
     justify-content: end;
     transform: translate(-9px, -5px); // Pixelperfect
+  }
+
+  @include vp-767 {
+    transform: translate(0, -3px); // Pixelperfect
   }
 }
 

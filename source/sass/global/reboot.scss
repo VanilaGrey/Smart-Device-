@@ -13,7 +13,7 @@
 
 html {
   min-width: 320px;
-  font-size: $fz_default;
+  font-size: $fz-default;
   line-height: 1.25;
   scroll-behavior: smooth;
   font-family: $ff-roboto-condensed;
@@ -27,7 +27,6 @@ html {
 
 body {
   margin: 0;
-  min-height: 100vh;
 }
 
 a {
@@ -59,7 +58,8 @@ textarea {
   border-radius: 0;
 
   &::placeholder {
-    opacity: 1;
+    color: inherit;
+    opacity: 0.6;
   }
 
   &:invalid {

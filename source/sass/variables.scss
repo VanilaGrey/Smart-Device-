@@ -10,19 +10,21 @@ $color-transparent: rgba($color-default-white, 0);
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
-$color-deep-sky-blue: #00b2ff;
-$color-black-pearl: #041827;
-$color-black-pearl-light: #192024;
 $color-alice-blue-light: #f2f5f6;
+$color-alice-blue-lighter: #f8fdff;
 $color-black-pearl-dark: #041827;
+$color-black-pearl-light: #192024;
+$color-black-pearl: #041827;
+$color-deep-sky-blue: #00b2ff;
+$color-silver: #c4c4c4;
 $color-whisper-light: #ebebeb;
 
 // Gradient
 
 $gradient-black-pearl-to-transparent: linear-gradient(
   to top,
+  $color-black-pearl 84.9%,
   $color-transparent,
-  $color-black-pearl 18px
 );
 
 $gradient-black-pearl-light-to-transparent: linear-gradient(

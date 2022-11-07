@@ -5,7 +5,10 @@
 		{{ content }}
 
 	{% if link %}
-		<a class="main-header__btn" href="{{ link.url }}">{{ link.title }}</a>
+		<a class="main-header__btn" href="{{ link.url }}">
+			<span class="mobile-hide">{{ link.title }}</span>
+			<span class="mobile-show">{{ link.mobileTitle }}</span>
+		</a>
 	{% endif %}
 	</div>
 </header>

@@ -4,6 +4,67 @@
   @include vp-1023 {
     padding: 0;
   }
+
+  @include vp-767 {
+    position: relative;
+    padding: 22px 25px 18px;
+    border-top: 1px solid rgba($color-alice-blue-lighter, 0.7);
+    border-bottom: 1px solid rgba($color-alice-blue-lighter, 0.7);
+  }
+}
+
+.cell__toggler {
+  display: none;
+
+  @include default-interactive;
+
+  @include vp-767 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 56px;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    outline-offset: -2px;
+    cursor: pointer;
+    user-select: none;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 28px;
+      right: 26px;
+      width: 15px;
+      height: 1px;
+      background-color: $color-default-white;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+
+    &[aria-expanded="true"] {
+      &::after {
+        display: none;
+      }
+
+      + .cell__list {
+        display: block;
+      }
+    }
+
+    &[data-nojs] {
+      display: none;
+
+      + .cell__list {
+        display: block;
+      }
+    }
+  }
 }
 
 .cell__heading {
@@ -12,6 +73,10 @@
   font-size: 15px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+
+  @include vp-767 {
+    margin: 0;
+  }
 }
 
 .cell__list {
@@ -19,6 +84,11 @@
   padding: 0;
   list-style: none;
   opacity: 0.7;
+
+  @include vp-767 {
+    display: none;
+    margin: 16px 0 0;
+  }
 }
 
 .cell__item {
@@ -26,10 +96,22 @@
   line-height: 22px;
   font-family: $ff-pt-mono;
   break-inside: avoid-column;
+
+  @include vp-767 {
+    margin-bottom: 11px;
+    font-size: 14px;
+    line-height: 19px;
+
+    &:last-child {
+      margin-bottom: -2px;
+    }
+
+    &:first-child {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .cell__link {
-  @include hover {
-    text-decoration: underline;
-  }
+  @include default-interactive;
 }

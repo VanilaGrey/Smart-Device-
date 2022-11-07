@@ -1,7 +1,7 @@
 <script src="js/vendor.min.js"></script>
 <script src="js/main.min.js{{ version }}"></script>
 
-{% if isDev %}
+{% if isDev and page == 'index' %}
 	<script>
 		window.pinegladePP = {
 			breakpoints: [320, 768, 1320]
