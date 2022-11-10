@@ -3,7 +3,12 @@ export default (formElement, id = 0) => {
   let storageSupported = false;
 
   fieldElements.forEach((fieldElement) => {
-    const {name} = fieldElement;
+    const {name, type} = fieldElement;
+
+    if (type === 'password') {
+      return;
+    }
+
     const fieldId = `form-${id}-${name}`;
 
     try {
@@ -15,6 +20,16 @@ export default (formElement, id = 0) => {
       }
     } catch (error) {
       // Do nothing
+    }
+
+    if (type === 'tel') {
+      window.Maska.create(fieldElement, {
+        mask: '+7(###)#######',
+      });
+
+      if (!fieldElement.value) {
+        fieldElement.value = '+7(';
+      }
     }
 
     fieldElement.addEventListener('change', () => {

@@ -3,7 +3,7 @@ import browserSync from 'browser-sync';
 import del from 'del';
 import compileLayouts from './gulp/compileLayouts.mjs';
 import compileStyles from './gulp/compileStyles.mjs';
-import {copy, copyImages, copySvg} from './gulp/copyAssets.mjs';
+import {copy, copyFavicons, copyImages, copySvg} from './gulp/copyAssets.mjs';
 import js from './gulp/compileScripts.mjs';
 import {
   svgo,
@@ -64,7 +64,7 @@ const build = gulp.series(
   gulp.parallel(lintSpaces, lintStyles, lintScripts),
   clean,
   svgo,
-  gulp.parallel(copy, compileLayouts, compileStyles, sprite, js)
+  gulp.parallel(copy, copyFavicons, compileLayouts, compileStyles, sprite, js)
 );
 const start = gulp.series(build, syncServer);
 
