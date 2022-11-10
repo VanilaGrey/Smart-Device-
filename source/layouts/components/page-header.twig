@@ -4,8 +4,10 @@
 
 		{% include 'contacts.twig' with { bemMix: 'page-header__contacts', isHeading: true }  %}
 
-		<a class="page-header__btn btn btn--transparent" href="{{ callBack.url }}">
-			{{ callBack.title }}
-		</a>
+			{% if callbackLink %}
+			<a class="page-header__btn btn btn--transparent" href="{{ callbackLink.url }}">
+				{{ callbackLink.title }}
+			</a>
+		{% endif %}
 	</div>
 </header>

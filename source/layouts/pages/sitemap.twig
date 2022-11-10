@@ -1,14 +1,20 @@
 {% extends '../common/layout.twig' %}
-
 {% block header %}{% endblock %}
-
 {% block main %}
 	<section class="container">
 		<h1>Разводящая страница</h1>
 		<ol>
 			<li><a href="index.html">Главная — index.html</a></li>
+			{% for page in pages %}
+				<li>
+					<a href="{{ page.id }}.html">
+						{{ page.title }}
+						—
+						{{ page.id }}.html
+					</a>
+				</li>
+			{% endfor %}
 		</ol>
 	</section>
 {% endblock %}
-
 {% block footer %}{% endblock %}

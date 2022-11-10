@@ -10,7 +10,6 @@ const [mainPhone, ...additionalPhones] = [
 
 export default {
   addressLinks: {
-    expanded: true,
     heading: 'Наш офис',
     id: 'contacts',
     list: [
@@ -24,9 +23,9 @@ export default {
       })),
     ],
   },
-  callBack: {
+  callbackLink: {
     title: 'Заказать звонок',
-    url: '#!',
+    url: 'callback.html',
   },
   contacts: [
     {
@@ -59,5 +58,22 @@ export default {
     })),
   },
   slogan: 'умные технологии',
+  socials: [
+    {
+      id: 'ok',
+      title: 'Мы в Одноклассниках.',
+      url: '#!',
+    },
+    {
+      id: 'vk',
+      title: 'Мы в Контакте.',
+      url: '#!',
+    },
+    {
+      id: 'pinterest',
+      title: 'Мы в Pinterest',
+      url: '#!',
+    },
+  ],
   spoilerTogglerText: 'Список ссылок.',
 };

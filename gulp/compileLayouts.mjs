@@ -9,9 +9,14 @@ import validateBem from 'gulp-html-bemlinter';
 const isDev = process.env.NODE_ENV === 'development';
 const lintMode = Boolean(process.env.LINT);
 
+const SOURCES = ['source/layouts/pages/**/*.twig'];
+if (!isDev) {
+  SOURCES.push('!source/layouts/pages/**/*-dev.twig');
+}
+
 const compileLayouts = () =>
   gulp
-    .src('source/layouts/pages/**/*.twig')
+    .src(SOURCES)
     .pipe(
       getData(async ({ path }) => {
         const page = path
