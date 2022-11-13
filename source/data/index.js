@@ -1,5 +1,5 @@
 export const getFormContent = (id, buttonText = 'Отправить') => `<form
-  action="https://echo.htmlacademy.ru"
+  class="form" action="https://echo.htmlacademy.ru"
 >
   <input
     id="${id}-name"
@@ -40,6 +40,7 @@ export default {
         Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
       </p>
       ${getFormContent('callback')}`,
+    modalId: 'callback',
   },
   promo: {
     content:

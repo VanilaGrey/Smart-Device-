@@ -1,0 +1,9 @@
+<div class="modal {{ dev ? 'modal--dev is-active' }}" data-modal="{{ data.modalId }}">
+	<div class="modal__content">
+		{% include component ~ '.twig' with data %}
+
+		<button class="modal__close-btn" type="button" data-close-modal="{{ data.modalId }}">
+			<span class="visually-hidden">Закрыть.</span>
+		</button>
+	</div>
+</div>

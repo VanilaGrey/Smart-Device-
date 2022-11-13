@@ -129,6 +129,7 @@ module.exports = {
         ignoreAtRules: [
           'content',
           'define-mixin',
+          'if',
           'include',
           'mixin',
           'rules',
