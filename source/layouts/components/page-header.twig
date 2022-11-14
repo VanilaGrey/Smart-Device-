@@ -5,7 +5,11 @@
 		{% include 'contacts.twig' with { bemMix: 'page-header__contacts', isHeading: true }  %}
 
 			{% if callbackLink %}
-			<a class="page-header__btn btn btn--transparent" href="{{ callbackLink.url }}">
+		<a
+				class="page-header__btn btn btn--transparent"
+				href="{{ callbackLink.url }}"
+				{{ callback ? 'data-open-modal="' ~ callback.modalId ~ '"' }}
+			>
 				{{ callbackLink.title }}
 			</a>
 		{% endif %}

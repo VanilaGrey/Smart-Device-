@@ -1,11 +1,10 @@
 export const getFormContent = (id, buttonText = 'Отправить') => `<form
   class="form" action="https://echo.htmlacademy.ru"
->
+  >
   <input
     id="${id}-name"
     name="name"
     type="text"
-    value="Имя"
     placeholder="Имя"
     pattern="^[A-Za-zА-Яа-яЁё\\- ]+$"
     required
@@ -15,7 +14,6 @@ export const getFormContent = (id, buttonText = 'Отправить') => `<form
     id="${id}-phone"
     name="phone"
     type="tel"
-    value="Телефон"
     placeholder="Телефон"
     pattern="^\\+[\\d\\-() ]{10,17}$"
     required
@@ -54,7 +52,7 @@ export default {
     link: {
       mobileTitle: 'бесплатная консультация',
       title: 'Получить бесплатную консультацию',
-      url: '#feedback',
+      url: '#feedback-name',
     },
   },
   advantages: [
@@ -168,7 +166,6 @@ export default {
     content: `<h2>Остались вопросы? Задайте их нам!</h2>
       <p>Мы проконсультируем Вас бесплатно</p>
       ${getFormContent('feedback', 'Задать вопрос')}`,
-    id: 'feedback',
     image: {
       default: 'img/airplane.png',
       default2x: 'img/airplane@2x.png',
