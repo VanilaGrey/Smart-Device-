@@ -769,7 +769,7 @@ input[type=number] {
 .catalog__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 85px;
+  gap: 7%;
   margin-top: 0;
   margin-bottom: 0;
   list-style: none;
@@ -779,8 +779,7 @@ input[type=number] {
   position: relative;
   z-index: 1;
   display: block;
-  min-height: 650px;
-  padding: 48px 120px 100px 40px;
+  padding-top: 185.71%;
   transition: opacity 0.3s ease;
 }
 
@@ -821,8 +820,12 @@ input[type=number] {
 }
 
 .catalog__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 250px;
   margin: 0;
-  max-width: 190px;
+  padding: 48px 40px 100px;
   font-size: 20px;
   line-height: 30px;
 }
@@ -1584,12 +1587,12 @@ input[type=number] {
   }
 
   .catalog__link {
-    min-height: 250px;
-    padding: 37px 44px 100px;
+    padding-top: 37.31%;
   }
 
   .catalog__text {
-    max-width: 150px;
+    max-width: 238px;
+    padding: 37px 44px 100px;
   }
 
   .form-section {
@@ -1846,8 +1849,7 @@ input[type=number] {
   }
 
   .catalog__link {
-    min-height: 250px;
-    padding: 26px 30px 70px;
+    height: 250px;
   }
 
   .catalog__link::before {
@@ -1856,7 +1858,8 @@ input[type=number] {
   }
 
   .catalog__text {
-    max-width: 135px;
+    max-width: 195px;
+    padding: 26px 30px 70px;
     font-size: 18px;
   }
 
