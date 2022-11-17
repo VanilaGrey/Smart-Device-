@@ -1,4 +1,4 @@
-.feedback-section {
+.form-section {
   position: relative;
   padding: 165px 0 235px;
   color: $color-default-white;
@@ -29,11 +29,11 @@
   }
 }
 
-.feedback-section__inner {
+.form-section__inner {
   display: flex;
 }
 
-.feedback-section__image {
+.form-section__image {
   flex-shrink: 0;
   max-width: 42%;
   margin: 81px 102px 0 0;
@@ -44,7 +44,7 @@
   }
 }
 
-.feedback-section__text {
+.form-section__text {
   margin-left: 13px;
 
   @include vp-1023 {

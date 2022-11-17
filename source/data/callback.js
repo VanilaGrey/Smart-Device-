@@ -8,10 +8,10 @@ export default {
       </p>
       ${getFormContent('callback')}`,
     image: {
-      default: 'img/plane.png',
-      default2x: 'img/plane@2x.png',
-      webp: 'img/plane.webp',
-      webp2x: 'img/plane@2x.webp',
+      default: 'img/airplane.png',
+      default2x: 'img/airplane@2x.png',
+      webp: 'img/airplane.webp',
+      webp2x: 'img/airplane@2x.webp',
     },
   },
   callbackLink: null, // Переопределяем общие данные из _common.js

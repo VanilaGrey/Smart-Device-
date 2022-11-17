@@ -122,4 +122,8 @@
       }
     }
   }
+
+  label[for] {
+    @include visually-hidden;
+  }
 }

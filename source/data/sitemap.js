@@ -8,9 +8,5 @@ export default {
       id: 'callback',
       title: 'Страница заказа звонка',
     },
-    {
-      id: '404',
-      title: 'Страница ошибок',
-    },
   ],
 };

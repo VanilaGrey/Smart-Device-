@@ -1,0 +1,13 @@
+<section class="form-section">
+	<div class="form-section__inner container">
+		{% if image %}
+			<div class="form-section__image">
+				{% include 'picture.twig' with { image } %}
+			</div>
+		{% endif %}
+
+		<div class="form-section__text">
+			{{ content }}
+		</div>
+	</div>
+</section>

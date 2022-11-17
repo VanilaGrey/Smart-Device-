@@ -15,8 +15,8 @@ export const LintableFiles = {
     '{gulp,source}/**/*.{html,js,json,md,mjs,scss,svg,twig}',
     '!source/{js,sass}/vendor/**',
   ],
-  SCRIPTS: ['source/**/*.{cjs,js,mjs}', '!source/js/vendor/**/*.js'],
-  STYLES: ['source/sass/**/*.scss', '!source/sass/vendor/**/*.scss'],
+  SCRIPTS: 'source/**/*.{cjs,js,mjs}',
+  STYLES: 'source/sass/**/*.scss',
 };
 
 // Задачи линтинга

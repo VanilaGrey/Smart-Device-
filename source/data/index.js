@@ -9,7 +9,7 @@ export const getFormContent = (id, buttonText = 'Отправить') => `<form
     pattern="^[A-Za-zА-Яа-яЁё\\- ]+$"
     required
   />
-  <label class="visually-hidden" for="${id}-name">Имя</label>
+  <label for="${id}-name">Имя</label>
   <input
     id="${id}-phone"
     name="phone"
@@ -18,11 +18,11 @@ export const getFormContent = (id, buttonText = 'Отправить') => `<form
     pattern="^\\+[\\d\\-() ]{10,17}$"
     required
   />
-  <label class="visually-hidden" for="${id}-phone">Телефон</label>
+  <label for="${id}-phone">Телефон</label>
   <textarea id="${id}-message" name="message" placeholder="Ваш вопрос">
     Ваш вопрос
   </textarea>
-  <label class="visually-hidden" for="${id}-message">Ваш вопрос</label>
+  <label for="${id}-message">Ваш вопрос</label>
   <button type="submit">${buttonText}</button>
   <label>
     <input name="agree" type="checkbox" checked required />
@@ -99,67 +99,29 @@ export default {
   services: {
     heading: 'Smart Device предлагает следующие товары и услуги',
     list: [
-      {
+      'Производство печатных плат',
+      'Монтаж печатных плат',
+      'Комплектующие для светотехники',
+    ].map((title, i) => {
+      const index = i + 1;
+
+      return {
         image: {
-          default: 'img/services-photo-1.jpg',
-          default2x: 'img/services-photo-1@2x.jpg',
-          defaultTablet: 'img/services-photo-1-tablet.jpg',
-          defaultTablet2x: 'img/services-photo-1-tablet@2x.jpg',
-          defaultMobile: 'img/services-photo-1-mobile.jpg',
-          defaultMobile2x: 'img/services-photo-1-mobile@2x.jpg',
-          webp: 'img/services-photo-1.webp',
-          webp2x: 'img/services-photo-1@2x.webp',
-          webpTablet: 'img/services-photo-1-tablet.webp',
-          webpTablet2x: 'img/services-photo-1-tablet@2x.webp',
-          webpMobile: 'img/services-photo-1-mobile.webp',
-          webpMobile2x: 'img/services-photo-1-mobile@2x.webp',
+          default: `img/services-photo-${index}.jpg`,
+          default2x: `img/services-photo-${index}@2x.jpg`,
+          webp: `img/services-photo-${index}.webp`,
+          webp2x: `img/services-photo-${index}@2x.webp`,
+          webpMobile: `img/services-photo-${index}-mobile.webp`,
+          webpMobile2x: `img/services-photo-${index}-mobile@2x.webp`,
+          webpTablet: `img/services-photo-${index}-tablet.webp`,
+          webpTablet2x: `img/services-photo-${index}-tablet@2x.webp`,
         },
         link: {
-          title: 'Производство печатных плат',
+          title,
           url: '#!',
         },
-      },
-      {
-        image: {
-          default: 'img/services-photo-2.jpg',
-          default2x: 'img/services-photo-2@2x.jpg',
-          defaultMobile: 'img/services-photo-2-mobile.jpg',
-          defaultMobile2x: 'img/services-photo-2-mobile@2x.jpg',
-          defaultTablet: 'img/services-photo-2-tablet.jpg',
-          defaultTablet2x: 'img/services-photo-2-tablet@2x.jpg',
-          webp: 'img/services-photo-2.webp',
-          webp2x: 'img/services-photo-2@2x.webp',
-          webpMobile: 'img/services-photo-2-mobile.webp',
-          webpMobile2x: 'img/services-photo-2-mobile@2x.webp',
-          webpTablet: 'img/services-photo-2-tablet.webp',
-          webpTablet2x: 'img/services-photo-2-tablet@2x.webp',
-        },
-        link: {
-          title: 'Монтаж печатных плат',
-          url: '#!',
-        },
-      },
-      {
-        image: {
-          default: 'img/services-photo-3.jpg',
-          default2x: 'img/services-photo-3@2x.jpg',
-          defaultMobile: 'img/services-photo-3-mobile.jpg',
-          defaultMobile2x: 'img/services-photo-3-mobile@2x.jpg',
-          defaultTablet: 'img/services-photo-3-tablet.jpg',
-          defaultTablet2x: 'img/services-photo-3-tablet@2x.jpg',
-          webp: 'img/services-photo-3.webp',
-          webp2x: 'img/services-photo-3@2x.webp',
-          webpMobile: 'img/services-photo-3-mobile.webp',
-          webpMobile2x: 'img/services-photo-3-mobile@2x.webp',
-          webpTablet: 'img/services-photo-3-tablet.webp',
-          webpTablet2x: 'img/services-photo-3-tablet@2x.webp',
-        },
-        link: {
-          title: 'Комплектующие для&nbsp;светотехники',
-          url: '#!',
-        },
-      },
-    ],
+      };
+    }),
     mobileHeading: 'Товары и услуги Smart Device',
   },
   feedback: {

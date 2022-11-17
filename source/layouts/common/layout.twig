@@ -25,10 +25,9 @@
 			{% block footer %}
 				{% include '../components/page-footer.twig' with { bemMix: 'page__footer' } %}
 			{% endblock %}
-
-			{% include 'scripts.twig' %}
 		</div>
 
 		{% block modal %}{% endblock %}
+		{% include 'scripts.twig' %}
 	</body>
 </html>
