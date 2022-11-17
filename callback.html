@@ -67,24 +67,24 @@
       </header>
 
       <main class="page__main page-main">
-        <section class="feedback-section">
-          <div class="feedback-section__inner container">
-            <div class="feedback-section__image">
+        <section class="form-section">
+          <div class="form-section__inner container">
+            <div class="form-section__image">
               <picture>
                 <source
                   type="image/webp"
-                  srcset="img/plane.webp 1x, img/plane@2x.webp 2x" />
+                  srcset="img/airplane.webp 1x, img/airplane@2x.webp 2x" />
 
                 <img
-                  src="img/plane.png"
-                  srcset="img/plane@2x.png 2x"
+                  src="img/airplane.png"
+                  srcset="img/airplane@2x.png 2x"
                   alt=""
                   aria-hidden="true"
                   loading="lazy" />
               </picture>
             </div>
 
-            <div class="feedback-section__text">
+            <div class="form-section__text">
               <h2>Закажите звонок</h2>
               <p>
                 Оставьте контакты, мы проконсультируем вас бесплатно в удобное
@@ -98,7 +98,7 @@
                   placeholder="Имя"
                   pattern="^[A-Za-zА-Яа-яЁё\- ]+$"
                   required="" />
-                <label class="visually-hidden" for="callback-name">Имя</label>
+                <label for="callback-name">Имя</label>
                 <input
                   id="callback-phone"
                   name="phone"
@@ -106,9 +106,7 @@
                   placeholder="Телефон"
                   pattern="^\+[\d\-() ]{10,17}$"
                   required="" />
-                <label class="visually-hidden" for="callback-phone"
-                  >Телефон</label
-                >
+                <label for="callback-phone">Телефон</label>
                 <textarea
                   id="callback-message"
                   name="message"
@@ -116,9 +114,7 @@
     Ваш вопрос
   </textarea
                 >
-                <label class="visually-hidden" for="callback-message"
-                  >Ваш вопрос</label
-                >
+                <label for="callback-message">Ваш вопрос</label>
                 <button type="submit">Отправить</button>
                 <label>
                   <input name="agree" type="checkbox" checked="" required="" />
@@ -239,9 +235,9 @@
           </div>
         </div>
       </footer>
-
-      <script src="js/vendor.min.js"></script>
-      <script src="js/main.min.js"></script>
     </div>
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>
