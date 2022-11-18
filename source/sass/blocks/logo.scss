@@ -1,10 +1,10 @@
 .logo {
   position: relative;
   padding-left: 70px;
+}
 
-  &[href] {
-    @include default-interactive;
-  }
+.logo[href] {
+  @include default-interactive;
 }
 
 .logo__image {

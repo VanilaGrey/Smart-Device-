@@ -108,8 +108,8 @@ input {
 
     appearance: none;
   }
+}
 
-  &[type="number"] {
-    appearance: textfield;
-  }
+input[type="number"] {
+  appearance: textfield;
 }

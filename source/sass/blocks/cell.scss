@@ -46,24 +46,24 @@
     &::after {
       transform: rotate(90deg);
     }
+  }
+}
 
-    &[aria-expanded="true"] {
-      &::after {
-        display: none;
-      }
+.cell__toggler[aria-expanded="true"] {
+  &::after {
+    display: none;
+  }
 
-      + .cell__list {
-        display: block;
-      }
-    }
+  + .cell__list {
+    display: block;
+  }
+}
 
-    &[data-nojs] {
-      display: none;
+.cell__toggler[data-nojs] {
+  display: none;
 
-      + .cell__list {
-        display: block;
-      }
-    }
+  + .cell__list {
+    display: block;
   }
 }
 
