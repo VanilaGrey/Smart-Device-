@@ -1288,6 +1288,22 @@ input[type=number] {
   }
 }
 
+.cell__toggler[aria-expanded=true]::after {
+  display: none;
+}
+
+.cell__toggler[aria-expanded=true] + .cell__list {
+  display: block;
+}
+
+.cell__toggler[data-nojs] {
+  display: none;
+}
+
+.cell__toggler[data-nojs] + .cell__list {
+  display: block;
+}
+
 .cell__heading {
   margin: 0 0 20px;
   font-weight: 400;
@@ -2067,22 +2083,6 @@ input[type=number] {
 
   .cell__toggler::after {
     transform: rotate(90deg);
-  }
-
-  .cell__toggler[aria-expanded=true]::after {
-    display: none;
-  }
-
-  .cell__toggler[aria-expanded=true] + .cell__list {
-    display: block;
-  }
-
-  .cell__toggler[data-nojs] {
-    display: none;
-  }
-
-  .cell__toggler[data-nojs] + .cell__list {
-    display: block;
   }
 
   .cell__heading {
