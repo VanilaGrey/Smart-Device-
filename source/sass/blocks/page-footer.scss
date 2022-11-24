@@ -17,7 +17,7 @@
   grid-template-rows: min-content 1fr;
   grid-template-columns: 335fr 460fr 345fr;
   grid-template-areas: "logo sitemap contacts" "socials sitemap contacts";
-  gap: 40px;
+  gap: 35px 40px;
   align-items: start;
 
   @include vp-1023 {
@@ -38,7 +38,7 @@
 
   @include vp-767 {
     justify-self: center;
-    margin-right: 17px; // Pixelperfect
+    margin-right: 6px; // Pixelperfect
   }
 }
 
@@ -50,12 +50,12 @@
   @include vp-1023 {
     justify-self: end;
     align-self: center;
-    margin: 0 -5px 0 11px; //pixelperfect
+    transform: translateY(-3px); // Pixelperfect
   }
 
   @include vp-767 {
     justify-self: center;
-    margin: 15px 0 19px 3px;
+    margin: 23px 0 25px 3px;
   }
 }
 

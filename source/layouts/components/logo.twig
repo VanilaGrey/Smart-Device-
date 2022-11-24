@@ -1,14 +1,3 @@
-<a
-	class="logo {{ isHeading ? 'logo--headable' }} {{ bemMix }}"
-	{{ page == 'index' ? 'aria-current="page"' : 'href="index.html"' }}
->
-	<img class="logo__image" src="img/svg/logo.svg" alt="Логотип {{ projectName}}." width="55" height="55">
-
-	{% if isHeading %}
-		<h1 class="logo__title">{{ projectName }}</h1>
-	{% else %}
-		<b class="logo__title">{{ projectName }}</b>
-	{% endif %}
-
-	<p class="logo__description">{{ slogan }}</p>
+<a class="logo {{ bemMix }}" {{ page == 'index' ? 'aria-current="page"' : 'href="index.html"' }}>
+	<img class="logo__image" src="img/svg/logo.svg" alt="Логотип {{ projectName}}." width="215" height="55">
 </a>
