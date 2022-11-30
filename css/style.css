@@ -780,6 +780,7 @@ input[type=number] {
   z-index: 1;
   display: block;
   padding-top: 185.71%;
+  overflow-y: auto;
   transition: opacity 0.3s ease;
 }
 
@@ -804,7 +805,7 @@ input[type=number] {
   background-image: url("../img/sprite_auto.svg#arrow");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 5px;
+  background-size: 7px;
   border-top-left-radius: 3px;
 }
 
@@ -986,7 +987,7 @@ input[type=number] {
 .form label {
   display: flex;
   align-items: center;
-  padding: 14px 10px;
+  padding: 14px 0 14px 10px;
   font-size: 14px;
   line-height: 16px;
   font-family: "PT Mono", "Courier New", monospace;
@@ -1065,8 +1066,9 @@ input[type=number] {
   right: 0;
   bottom: 0;
   left: 0;
+  width: 100%;
   max-width: none;
-  margin: 0 auto;
+  height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -1193,6 +1195,7 @@ input[type=number] {
 }
 
 .page-footer {
+  margin-top: auto;
   padding: 50px 0 20px;
   color: #ffffff;
   background-color: #041827;
@@ -1218,7 +1221,7 @@ input[type=number] {
   -ms-grid-column: 1;
   grid-area: socials;
   justify-self: start;
-  margin: 0 0 0 11px;
+  margin: -6px 0 0 11px;
 }
 
 .page-footer__cell {
@@ -1601,6 +1604,7 @@ input[type=number] {
 
   .form-section__text {
     margin-left: 0;
+    width: 100%;
   }
 
   .form-section__text h2 {
@@ -1715,6 +1719,7 @@ input[type=number] {
     justify-self: end;
     align-self: center;
     transform: translateY(-3px);
+    margin: 0 -4px 0 11px;
   }
 
   .page-footer__cell {
@@ -1991,7 +1996,7 @@ input[type=number] {
 
   .page-footer__socials {
     justify-self: center;
-    margin: 23px 0 25px 3px;
+    margin: 13px 0 16px 3px;
   }
 
   .page-footer__cell {
