@@ -1,4 +1,5 @@
 .page-footer {
+  margin-top: auto;
   padding: 50px 0 20px;
   color: $color-default-white;
   background-color: $color-black-pearl;
@@ -45,17 +46,18 @@
 .page-footer__socials {
   grid-area: socials;
   justify-self: start;
-  margin: 0 0 0 11px;
+  margin: -6px 0 0 11px;
 
   @include vp-1023 {
     justify-self: end;
     align-self: center;
     transform: translateY(-3px); // Pixelperfect
+    margin: 0 -4px 0 11px;
   }
 
   @include vp-767 {
     justify-self: center;
-    margin: 23px 0 25px 3px;
+    margin: 13px 0 16px 3px;
   }
 }
 

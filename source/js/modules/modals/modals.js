@@ -98,7 +98,7 @@ export class Modals {
   _modalClickHandler(evt) {
     const target = evt.target;
 
-    if (!target.closest('[data-close-modal]')) {
+    if (!target.closest('[data-close-modal]') && !target.dataset.modal) {
       return;
     }
 

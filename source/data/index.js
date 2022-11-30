@@ -19,8 +19,7 @@ export const getFormContent = (id, buttonText = 'Отправить') => `<form
     required
   />
   <label for="${id}-phone">Телефон</label>
-  <textarea id="${id}-message" name="message" placeholder="Ваш вопрос">
-    Ваш вопрос
+  <textarea id="${id}-message" name="message" placeholder="Ваш вопрос">Ваш вопрос
   </textarea>
   <label for="${id}-message">Ваш вопрос</label>
   <button type="submit">${buttonText}</button>
@@ -52,11 +51,11 @@ export default {
     link: {
       mobileTitle: 'бесплатная консультация',
       title: 'Получить бесплатную консультацию',
-      url: '#feedback-name',
+      url: '#feedback',
     },
   },
   advantages: [
-    '<img src="img/svg/watch.svg" width="35" height="35" alt=""><h3>Оперативные сроки</h3><p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>',
+    '<img src="img/svg/watch.svg" width="35" height="35" alt=""><h3>Оперативные сроки</h3><p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и&nbsp;комплектующих в самые короткие сроки</p>',
     '<img src="img/svg/people.svg" width="35" height="35" alt=""><h3>Крупные поставщики</h3><p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.</p>',
     '<img src="img/svg/detective.svg" width="35" height="35" alt=""><h3>Полная конфиденциальность</h3><p>По желанию клиента&nbsp; мы обеспечиваем полную конфиденциальность.</p>',
     '<img src="img/svg/tag.svg" width="35" height="35" alt=""><h3>Персонализация стоимости</h3><p>Мы&nbsp; подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>',
@@ -128,6 +127,7 @@ export default {
     content: `<h2>Остались вопросы? Задайте их нам!</h2>
       <p>Мы проконсультируем Вас бесплатно</p>
       ${getFormContent('feedback', 'Задать вопрос')}`,
+    id: 'feedback',
     image: {
       default: 'img/airplane.png',
       default2x: 'img/airplane@2x.png',

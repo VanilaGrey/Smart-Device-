@@ -50,6 +50,7 @@
   z-index: 1;
   display: block;
   padding-top: 185.71%;
+  overflow-y: auto;
 
   @include default-interactive;
 
@@ -72,7 +73,7 @@
     background-image: url("../img/sprite_auto.svg#arrow");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 5px;
+    background-size: 7px;
     border-top-left-radius: 3px;
 
     @include vp-767 {
