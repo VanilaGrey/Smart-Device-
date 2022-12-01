@@ -26,10 +26,6 @@ export default (formElement, id = 0) => {
       window.Maska.create(fieldElement, {
         mask: '+7(###)#######',
       });
-
-      if (!fieldElement.value) {
-        fieldElement.value = '+7(';
-      }
     }
 
     fieldElement.addEventListener('change', () => {
