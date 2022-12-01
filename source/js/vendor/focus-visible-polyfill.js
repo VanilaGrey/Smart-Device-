@@ -5,7 +5,7 @@
  * @param {(Document|ShadowRoot)} scope
  * @see https://github.com/WICG/focus-visible
  */
-function applyFocusVisiblePolyfill(scope) {
+ function applyFocusVisiblePolyfill(scope) {
   var hadKeyboardEvent = true;
   var hadFocusVisibleRecently = false;
   var hadFocusVisibleRecentlyTimeout = null;
@@ -156,7 +156,10 @@ function applyFocusVisiblePolyfill(scope) {
       return;
     }
 
-    if (e.target.classList.contains('focus-visible') || e.target.hasAttribute('data-focus-visible-added')) {
+    if (
+      e.target.classList.contains('focus-visible') ||
+      e.target.hasAttribute('data-focus-visible-added')
+    ) {
       // To detect a tab/window switch, we look for a blur event followed
       // rapidly by a visibility change.
       // If we don't see a visibility change within 100ms, it's probably a
