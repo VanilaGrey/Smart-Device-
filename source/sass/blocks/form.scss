@@ -99,6 +99,7 @@
     font-family: $ff-pt-mono;
     color: rgba($color-default-white, 0.8);
     cursor: pointer;
+    order: 100;
 
     @include default-interactive;
 
