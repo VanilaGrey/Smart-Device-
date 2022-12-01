@@ -19,8 +19,7 @@ export const getFormContent = (id, buttonText = 'Отправить') => `<form
     required
   />
   <label for="${id}-phone">Телефон</label>
-  <textarea id="${id}-message" name="message" placeholder="Ваш вопрос">
-  </textarea>
+  <textarea id="${id}-message" name="message" placeholder="Ваш вопрос"></textarea>
   <label for="${id}-message">Ваш вопрос</label>
   <button type="submit">${buttonText}</button>
   <label>

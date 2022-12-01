@@ -1664,6 +1664,10 @@ input[type=number] {
     padding-top: 100px;
   }
 
+  .page__header {
+    position: absolute;
+  }
+
   .page-header {
     padding: 17px 0 28px;
   }
@@ -1944,6 +1948,10 @@ input[type=number] {
 
   .page--form .page__main {
     padding-top: 50px;
+  }
+
+  .page__header {
+    position: absolute;
   }
 
   .page-header {
