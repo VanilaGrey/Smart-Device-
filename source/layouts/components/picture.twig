@@ -10,6 +10,7 @@
 		{% endif %}
 
 		{% if not immediately %}
+			loading="lazy"
 		{% endif %}
 	{% endset %}
 
@@ -40,6 +41,7 @@
 			src="{{ default }}"
 			{{ default2x ? 'srcset="' ~ default2x ~ ' 2x"' }}
 			{{ imgAttributes }}
+			{{ immediately ?: 'loading="lazy"' }}
 		/>
 	</picture>
 {% endwith %}
