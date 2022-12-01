@@ -21,11 +21,11 @@ export const getFormContent = (id, buttonText = 'Отправить') => `<form
   <label for="${id}-phone">Телефон</label>
   <textarea id="${id}-message" name="message" placeholder="Ваш вопрос"></textarea>
   <label for="${id}-message">Ваш вопрос</label>
-  <button type="submit">${buttonText}</button>
   <label>
     <input name="agree" type="checkbox" checked required />
     Я согласен на обработку персональных данных
   </label>
+  <button type="submit">${buttonText}</button>
 </form>`;
 
 export default {
