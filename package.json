@@ -54,6 +54,7 @@
     "postcss-scss": "4.0.5",
     "sass": "1.53.0",
     "stylelint": "13.13.1",
+    "typograf": "6.15.1",
     "webpack": "4.42.0",
     "webpack-stream": "5.2.1"
   },
