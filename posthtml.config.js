@@ -1,4 +1,3 @@
-const {getPosthtmlBemLinter} = require('posthtml-bem-linter');
 const {getPosthtmlW3cValidator} = require('posthtml-w3c-validator');
 const parser = require('posthtml-parser');
 const render = require('posthtml-render');
@@ -20,9 +19,6 @@ module.exports = {
     getPosthtmlW3cValidator({
       exit: process.env.NODE_ENV === 'development',
       forceOffline: true,
-      getSourceName,
-    }),
-    getPosthtmlBemLinter({
       getSourceName,
     }),
   ],
