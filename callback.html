@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Device</title>
+    <meta
+      name="description"
+      content="Печатные платы: производство и монтаж, поставка комплектующих, блоков и модулей" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link
+      href="fonts/roboto-condensed-700.woff2"
+      rel="preload"
+      as="font"
+      crossorigin="anonymous" />
+    <link
+      href="fonts/roboto-condensed-400.woff2"
+      rel="preload"
+      as="font"
+      crossorigin="anonymous" />
+    <link
+      href="fonts/pt-mono.woff2"
+      rel="preload"
+      as="font"
+      crossorigin="anonymous" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#041827" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+
+  <body>
+    <div class="page page--form">
+      <header class="page-header page__header">
+        <div class="page-header__inner container">
+          <a class="logo page-header__logo" href="index.html">
+            <img
+              class="logo__image"
+              src="img/svg/logo.svg"
+              alt="Логотип Smart Device."
+              width="215"
+              height="55" />
+          </a>
+
+          <ul class="contacts page-header__contacts">
+            <li class="contacts__item">
+              <a
+                class="contacts__link contacts__link--mailto"
+                href="mailto:info@sd.ru">
+                <span class="contacts__text">info@sd.ru</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a
+                class="contacts__link contacts__link--tel"
+                href="tel:+74950005252">
+                <span class="contacts__text">+7 (495) 000 52 52</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <main class="page__main page-main">
+        <h1 class="visually-hidden">Smart Device.</h1>
+        <section class="form-section">
+          <div class="form-section__inner container">
+            <div class="form-section__image">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="img/airplane.webp 1x, img/airplane@2x.webp 2x" />
+
+                <img
+                  src="img/airplane.png"
+                  srcset="img/airplane@2x.png 2x"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy" />
+              </picture>
+            </div>
+
+            <div class="form-section__text">
+              <h2>Закажите звонок</h2>
+              <p>
+                Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно
+                в&nbsp;удобное время
+              </p>
+              <form class="form" action="https://echo.htmlacademy.ru">
+                <input
+                  id="callback-name"
+                  name="name"
+                  type="text"
+                  placeholder="Имя"
+                  pattern="^[A-Za-zА-Яа-яЁё\- ]+$"
+                  required="" />
+                <label for="callback-name">Имя</label>
+                <input
+                  id="callback-phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="Телефон"
+                  pattern="^\+[\d\-() ]{10,17}$"
+                  required="" />
+                <label for="callback-phone">Телефон</label>
+                <textarea
+                  id="callback-message"
+                  name="message"
+                  placeholder="Ваш вопрос"></textarea>
+                <label for="callback-message">Ваш вопрос</label>
+                <label>
+                  <input name="agree" type="checkbox" checked="" required="" />
+                  Я&nbsp;согласен на&nbsp;обработку персональных данных
+                </label>
+                <button type="submit">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="page-footer">
+        <div class="page-footer__inner container" data-accordeon="">
+          <a class="logo page-footer__logo" href="index.html">
+            <img
+              class="logo__image"
+              src="img/svg/logo.svg"
+              alt="Логотип Smart Device."
+              width="215"
+              height="55" />
+          </a>
+
+          <ul class="socials page-footer__socials">
+            <li>
+              <a class="socials__link socials__link--ok" href="#!">
+                <span class="visually-hidden"
+                  >Мы&nbsp;в&nbsp;Одноклассниках.</span
+                >
+              </a>
+            </li>
+            <li>
+              <a class="socials__link socials__link--vk" href="#!">
+                <span class="visually-hidden">Мы&nbsp;в&nbsp;Контакте.</span>
+              </a>
+            </li>
+            <li>
+              <a class="socials__link socials__link--pinterest" href="#!">
+                <span class="visually-hidden">Мы&nbsp;в&nbsp;Pinterest</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="cell page-footer__cell page-footer__cell--sitemap">
+            <h2 class="cell__heading">Разделы сайта</h2>
+
+            <button
+              class="cell__toggler"
+              type="button"
+              aria-controls="cell-sitemap"
+              aria-expanded="false"
+              data-nojs="">
+              <span class="visually-hidden">Список ссылок.</span>
+            </button>
+
+            <ul class="cell__list" id="cell-sitemap">
+              <li class="cell__item">
+                <a class="cell__link" href="#!">О&nbsp;Компании</a>
+              </li>
+              <li class="cell__item">
+                <a class="cell__link" href="#!">Продукты</a>
+              </li>
+              <li class="cell__item">
+                <a class="cell__link" href="#!">Производство печатных плат</a>
+              </li>
+              <li class="cell__item">
+                <a class="cell__link" href="#!">Монтаж печатных плат</a>
+              </li>
+              <li class="cell__item">
+                <a class="cell__link" href="#!">Комплектующие</a>
+              </li>
+              <li class="cell__item">
+                <a class="cell__link" href="#!">Доставка</a>
+              </li>
+              <li class="cell__item">
+                <a class="cell__link" href="#!">Контакты</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="cell page-footer__cell">
+            <h2 class="cell__heading">Наш офис</h2>
+
+            <button
+              class="cell__toggler"
+              type="button"
+              aria-controls="cell-contacts"
+              aria-expanded="false"
+              data-nojs="">
+              <span class="visually-hidden">Список ссылок.</span>
+            </button>
+
+            <ul class="cell__list" id="cell-contacts">
+              <li class="cell__item">
+                <a
+                  class="cell__link"
+                  href="https://www.google.com/maps/place/%D0%9E%D0%BB%D0%B8%D0%BC%D0%BF%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9+%D0%BF%D1%80-%D1%82.,+10,+%D0%9C%D1%8B%D1%82%D0%B8%D1%89%D0%B8,+%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB.,+141006/@55.9232536,37.759158,17z/data=!3m1!4b1!4m6!3m5!1s0x46b53195838bffff:0x8be3a5db7970d6ce!8m2!3d55.9232536!4d37.759158!16s%2Fg%2F11j004lpsb"
+                  >г. Мытищи, Олимпийский проспект, д.&nbsp;10</a
+                >
+              </li>
+              <li class="cell__item">
+                <a class="cell__link" href="tel:+74955894050"
+                  >+7 (495) 589-40-50</a
+                >
+              </li>
+              <li class="cell__item">
+                <a class="cell__link" href="tel:+79253895829"
+                  >+7 (925) 389-58-29</a
+                >
+              </li>
+              <li class="cell__item">
+                <a class="cell__link" href="tel:+79253647813"
+                  >+7 (925) 364-78-13</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
